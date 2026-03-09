@@ -142,6 +142,7 @@
             transform: translateY(-1px);
             box-shadow: 0 4px 16px rgba(0, 102, 255, 0.4);
         }
+        .nav-cta-short { display: none; }
 
         /* ============ HERO ============ */
         .hero {
@@ -323,6 +324,26 @@
             .testimonial-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
         }
+
+        @media (max-width: 640px) {
+            .nav .container { gap: 8px; }
+            .nav-logo { font-size: 1rem; min-width: 0; white-space: nowrap; }
+            .nav-cta { font-size: 0.8rem; padding: 8px 14px; white-space: nowrap; flex-shrink: 0; }
+            .nav-cta-long { display: none; }
+            .nav-cta-short { display: inline; }
+            .hero { padding: 60px 0 70px; }
+            .hero h1 { font-size: 2rem; }
+            .hero-h1-sub { display: none; }
+            .hero-sub { font-size: 1rem; }
+            .section { padding: 56px 0; }
+            .product-details h2 { font-size: 1.8rem; }
+            .price-tag { font-size: 2.2rem; }
+            .product-image-box { padding: 24px; }
+            .testimonials { padding: 56px 0; }
+            .faq-section { padding: 56px 0; }
+            .about-section { padding: 56px 0; }
+            .footer { padding: 40px 0 20px; }
+        }
     </style>
 </head>
 <body>
@@ -333,14 +354,14 @@
                 DI Water <em>Direct</em>
             </a>
             <a href="https://astmwater.com" class="nav-cta" data-testid="link-nav-supplier">
-                Visit Recommended Supplier
+                <span class="nav-cta-long">Visit Recommended Supplier</span><span class="nav-cta-short">Supplier</span>
             </a>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <h1 data-testid="text-hero-title">Deionized Water 1 Gallon | <em>Precision Purity for Small Labs & Growers</em></h1>
+            <h1 data-testid="text-hero-title">Deionized Water <em>1 Gallon</em> <span class="hero-h1-sub">| Precision Purity for Small Labs & Growers</span></h1>
             <p class="hero-sub" data-testid="text-hero-subtitle">The perfect format for bench-top laboratories, microgreen operations, and precision applications. ASTM D1193 Type II certified, >1.0 MΩ·cm resistivity. Prevent mold and mineral buildup with purified water for plants.</p>
             <div class="hero-buttons">
                 <a href="#buy" class="btn-primary" data-testid="button-hero-buy">View Pricing</a>
